@@ -14,6 +14,7 @@ namespace App\Model\Entity;
 class ComplexAccount extends RoleAwareEntity
 {
     protected array $_accessible = [
+        'id' => true,
         'balance' => true,
         'account_type' => true,
         'status' => true,

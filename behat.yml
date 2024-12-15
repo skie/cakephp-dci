@@ -8,6 +8,12 @@ default:
       contexts:
         - App\Test\Behat\Context\ReservationContext
         - App\Test\Behat\Context\DatabaseContext
+    money_transfer:
+      paths:
+        - "%paths.base%/tests/Behat/Features/MoneyTransfer"
+      contexts:
+        - App\Test\Behat\Context\MoneyTransferDatabaseContext
+        - App\Test\Behat\Context\MoneyTransferContext
   extensions:
     Behat\MinkExtension:
       base_url: 'http://localhost'
