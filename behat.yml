@@ -1,0 +1,16 @@
+default:
+  autoload:
+    "": "%paths.base%/tests/Behat"
+  suites:
+    reservation:
+      paths:
+        features: "%paths.base%/tests/Behat/Features/Reservation"
+      contexts:
+        - App\Test\Behat\Context\ReservationContext
+        - App\Test\Behat\Context\DatabaseContext
+  extensions:
+    Behat\MinkExtension:
+      base_url: 'http://localhost'
+      sessions:
+        default:
+          browser_stack: ~
