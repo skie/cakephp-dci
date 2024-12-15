@@ -6,6 +6,7 @@ namespace App\Model\Role;
 use Cake\Datasource\EntityInterface;
 use Cake\Event\EventDispatcherInterface;
 use Cake\Event\EventDispatcherTrait;
+use Cake\Utility\Hash;
 
 abstract class RoleBehavior implements EventDispatcherInterface
 {
@@ -35,10 +36,7 @@ abstract class RoleBehavior implements EventDispatcherInterface
      */
     public function getConfig(?string $key = null, $default = null): mixed
     {
-        if ($key === null) {
-            return $this->_config;
-        }
-        return $this->_config[$key] ?? $default;
+        return Hash::get($this->_config, $key, $default);
     }
 
     /**
