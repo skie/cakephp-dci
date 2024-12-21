@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d004f41db96561a5f64e13fd5d4a60e",
+    "content-hash": "c96374b41e1ebd589ec21dc8aac941d5",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -411,8 +411,8 @@
             "type": "library",
             "extra": {
                 "laminas": {
-                    "config-provider": "Laminas\\Diactoros\\ConfigProvider",
-                    "module": "Laminas\\Diactoros"
+                    "module": "Laminas\\Diactoros",
+                    "config-provider": "Laminas\\Diactoros\\ConfigProvider"
                 }
             },
             "autoload": {
@@ -1284,6 +1284,55 @@
             "time": "2024-10-03T15:41:04+00:00"
         },
         {
+            "name": "skie/rop",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/skie/ROP.git",
+                "reference": "3b29bdc7559eb0adf7ff2969ee9a42c54438485f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/skie/ROP/zipball/3b29bdc7559eb0adf7ff2969ee9a42c54438485f",
+                "reference": "3b29bdc7559eb0adf7ff2969ee9a42c54438485f",
+                "shasum": ""
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "^5.0",
+                "phpstan/phpstan": "^2.0",
+                "phpunit/phpunit": "^11.1.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ROP\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Evgeny Tomenko",
+                    "email": "skie@mail.ru"
+                }
+            ],
+            "description": "Railway Oriented Programming for PHP",
+            "homepage": "https://github.com/skie/ROP",
+            "keywords": [
+                "oriented",
+                "php",
+                "programming",
+                "railway"
+            ],
+            "support": {
+                "issues": "https://github.com/skie/ROP/issues",
+                "source": "https://github.com/skie/ROP/tree/1.0.0"
+            },
+            "time": "2024-12-20T12:03:36+00:00"
+        },
+        {
             "name": "symfony/config",
             "version": "v7.2.0",
             "source": {
@@ -2076,22 +2125,23 @@
     "packages-dev": [
         {
             "name": "behat/behat",
-            "version": "v3.16.0",
+            "version": "v3.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
-                "reference": "18f5f44c80d1cf5711ec27019afcb26b8bc6c3b0"
+                "reference": "3eb5ebae08db4e44ca6a458ba0f449dda753c465"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/18f5f44c80d1cf5711ec27019afcb26b8bc6c3b0",
-                "reference": "18f5f44c80d1cf5711ec27019afcb26b8bc6c3b0",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/3eb5ebae08db4e44ca6a458ba0f449dda753c465",
+                "reference": "3eb5ebae08db4e44ca6a458ba0f449dda753c465",
                 "shasum": ""
             },
             "require": {
                 "behat/gherkin": "^4.10.0",
                 "behat/transliterator": "^1.5",
                 "composer-runtime-api": "^2.2",
+                "composer/xdebug-handler": "^3.0",
                 "ext-mbstring": "*",
                 "php": "8.1.* || 8.2.* || 8.3.* || 8.4.* ",
                 "psr/container": "^1.0 || ^2.0",
@@ -2105,9 +2155,10 @@
             "require-dev": {
                 "herrera-io/box": "~1.6.1",
                 "phpunit/phpunit": "^9.6",
+                "sebastian/diff": "^4.0",
                 "symfony/polyfill-php84": "^1.31",
                 "symfony/process": "^5.4 || ^6.4 || ^7.0",
-                "vimeo/psalm": "^4.8"
+                "vimeo/psalm": "^5.0"
             },
             "suggest": {
                 "ext-dom": "Needed to output test results in JUnit format."
@@ -2126,7 +2177,9 @@
                     "Behat\\Hook\\": "src/Behat/Hook/",
                     "Behat\\Step\\": "src/Behat/Step/",
                     "Behat\\Behat\\": "src/Behat/Behat/",
-                    "Behat\\Testwork\\": "src/Behat/Testwork/"
+                    "Behat\\Config\\": "src/Behat/Config/",
+                    "Behat\\Testwork\\": "src/Behat/Testwork/",
+                    "Behat\\Transformation\\": "src/Behat/Transformation/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2158,9 +2211,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Behat/Behat/issues",
-                "source": "https://github.com/Behat/Behat/tree/v3.16.0"
+                "source": "https://github.com/Behat/Behat/tree/v3.17.0"
             },
-            "time": "2024-11-08T12:25:17+00:00"
+            "time": "2024-12-18T10:27:06+00:00"
         },
         {
             "name": "behat/gherkin",
@@ -2516,16 +2569,16 @@
         },
         {
             "name": "cakephp/cakephp-codesniffer",
-            "version": "5.1.3",
+            "version": "5.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp-codesniffer.git",
-                "reference": "04860c9746810d22d02d014deeb57bc80bf57804"
+                "reference": "6d0168a18c9fb6802103b41579abdcfba7021790"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/04860c9746810d22d02d014deeb57bc80bf57804",
-                "reference": "04860c9746810d22d02d014deeb57bc80bf57804",
+                "url": "https://api.github.com/repos/cakephp/cakephp-codesniffer/zipball/6d0168a18c9fb6802103b41579abdcfba7021790",
+                "reference": "6d0168a18c9fb6802103b41579abdcfba7021790",
                 "shasum": ""
             },
             "require": {
@@ -2565,7 +2618,7 @@
                 "issues": "https://github.com/cakephp/cakephp-codesniffer/issues",
                 "source": "https://github.com/cakephp/cakephp-codesniffer"
             },
-            "time": "2024-08-13T10:21:08+00:00"
+            "time": "2024-12-18T21:15:44+00:00"
         },
         {
             "name": "cakephp/debug_kit",
@@ -2976,13 +3029,13 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "3.x-dev"
-                },
                 "phpstan": {
                     "includes": [
                         "extension.neon"
                     ]
+                },
+                "branch-alias": {
+                    "dev-main": "3.x-dev"
                 }
             },
             "autoload": {
